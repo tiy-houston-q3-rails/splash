@@ -7,17 +7,17 @@
 			<p>Because you want a cookie. But don't have one.</p>
 		</div>
 
-    <form>
+    <%= form_tag notification_path do %>
       <div class="field">
-        <input type="text" placeholder="Your Name, Bro"/>
+        <%= text_field_tag :name, "", placeholder:"Your Name, Bro" %>
       </div>
       <div class="field">
-        <input type="text" placeholder="Your email"/>
+        <%= text_field_tag :email, "", placeholder:"Your email, por favor" %>
       </div>
       <div class="field">
-        <input type="submit" value="Tell me when I can get a cookie!!!1!!"></input>
+        <%= submit_tag "Tell me when I can get a cookie!!!1!!" %>
       </div>
-    </form>
+    <% end %>
 
 	</div>
 </div>
