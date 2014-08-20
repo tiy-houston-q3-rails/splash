@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+
+group :production do
+  gem 'rails_12factor'
+end
