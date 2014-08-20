@@ -14,12 +14,6 @@ class NotificationsController < ApplicationController
 
   def create
     @signup_form = SignupForm.new(params.require(:signup_form).permit([:name, :email]))
-    if @signup_form.valid?
-      @signup_form.deliver
-      redirect_to root_path
-    else
-      render "pages/index"
-    end
-
+    @signup_form.deliver if @signup_form.valid?
   end
 end

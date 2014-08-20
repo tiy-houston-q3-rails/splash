@@ -1,0 +1,11 @@
+<%= simple_form_for @signup_form, url: notification_path, remote: true do |f| %>
+  <div class="field">
+    <%= f.input :name, placeholder:"Your Name, Bro", label: false %>
+  </div>
+  <div class="field">
+    <%= f.input :email, placeholder:"Your email, por favor", label: false %>
+  </div>
+  <div class="field">
+    <%= f.submit "Tell me when I can get a cookie!!!1!!" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+
+
+<% if @signup_form.errors.any? %>
+  $("#form").html("<%= j render partial: 'pages/form' %>");
+  // else, render form over old form
+
+<% else %>
+  // if we sent it, replace with "SUP SUP"
+  $("#form").html("<h2 class='thanks'>Thanks for being super awesome. Cookies coming soon!</h2>")
+
+<% end %>

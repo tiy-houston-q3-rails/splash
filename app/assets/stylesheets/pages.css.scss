@@ -33,3 +33,7 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+.thanks {
+  @include stroke(1px, #fff);
+}
