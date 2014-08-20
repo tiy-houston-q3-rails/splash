@@ -1,5 +1,5 @@
 class NotificationsController < ApplicationController
-  def create
+  def create_with_mailer
     name = params[:name]
     email = params[:email]
 
@@ -10,5 +10,16 @@ class NotificationsController < ApplicationController
 
     # redirect to homepage
     redirect_to root_path
+  end
+
+  def create
+    @signup_form = SignupForm.new(params.require(:signup_form).permit([:name, :email]))
+    if @signup_form.valid?
+      @signup_form.deliver
+      redirect_to root_path
+    else
+      render "pages/index"
+    end
+
   end
 end

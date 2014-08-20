@@ -41,6 +41,8 @@ gem 'spring',        group: :development
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'mail_form'
+gem 'simple_form','3.1.0.rc2'
 
 group :production do
   gem 'rails_12factor'

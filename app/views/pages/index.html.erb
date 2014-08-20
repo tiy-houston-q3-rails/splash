@@ -7,15 +7,16 @@
 			<p>Because you want a cookie. But don't have one.</p>
 		</div>
 
-    <%= form_tag notification_path do %>
+
+    <%= simple_form_for @signup_form, url: notification_path do |f| %>
       <div class="field">
-        <%= text_field_tag :name, "", placeholder:"Your Name, Bro" %>
+        <%= f.input :name, placeholder:"Your Name, Bro", label: false %>
       </div>
       <div class="field">
-        <%= text_field_tag :email, "", placeholder:"Your email, por favor" %>
+        <%= f.input :email, placeholder:"Your email, por favor", label: false %>
       </div>
       <div class="field">
-        <%= submit_tag "Tell me when I can get a cookie!!!1!!" %>
+        <%= f.submit "Tell me when I can get a cookie!!!1!!" %>
       </div>
     <% end %>
 
