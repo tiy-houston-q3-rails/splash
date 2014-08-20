@@ -3,9 +3,9 @@
   $hero-background-bottom: adjust-hue($hero-background-top, -70);
   $hero-color: #222222;
   $gradient-angle: 10deg;
-  $hero-image: 'http://media2.onsugar.com/files/2014/03/24/002/n/1922195/f101fe4824def76e_thumb_temp_image10906271395701954/i/Milk-Cookie-Shots-Recipe.jpg';
+  $hero-image: 'hero.jpg';
 
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  @include background(image_url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
 
   background-repeat: no-repeat;
   background-position: top;
